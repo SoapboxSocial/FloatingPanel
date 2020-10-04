@@ -474,7 +474,6 @@ open class FloatingPanelController: UIViewController {
             log.warning("Already added to a parent(\(parent))")
             return
         }
-        assert((parent is UINavigationController) == false, "UINavigationController displays only one child view controller at a time.")
         assert((parent is UITabBarController) == false, "UITabBarController displays child view controllers with a radio-style selection interface")
         assert((parent is UISplitViewController) == false, "UISplitViewController manages two child view controllers in a master-detail interface")
         assert((parent is UITableViewController) == false, "UITableViewController should not be the parent because the view is a table view so that a panel doesn't work well")
